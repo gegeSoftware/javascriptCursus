@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+
+<html lang="nl">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+	content="korte beschrijving voor search engine, keywords herhalen" />
+<meta name="keywords"
+	content="keyword waarmee search engine de pagina toont" />
+<meta name="author" content="Geert Haegens" />
+<meta name="robots" content="all" />
+<link rel="icon" type="image/x-icon"
+	href="img/GGsoftLogoY_150dpi_oranje.ico" />
+<link href="css/normalize.css" rel="stylesheet" media="all">
+<link href="css/opmaak.css" rel="stylesheet" media="all">
+<!-- meta info voor facebook -->
+<!-- mata info voor twitter -->
+<title>Titel in browser</title>
+
+</head>
+
+<body>
+	<section class="bodywrapper">
+
+
+		<script type="text/javascript">
+		/*
+			var tekst = prompt("Uw tekst:", "");
+			document.write("lengte = " + tekst.length+"<br />");
+			document.write("alles in hoofdletters = " + tekst.toUpperCase()+"<br />");
+			document.write("alles in onderkast = " + tekst.toLowerCase()+"<br />");
+			*/
+			
+			var email = prompt("mail ?", "");
+			var isGeldig =  (email.indexOf("@", 0) > 0) && (email.indexOf("@", email.indexOf("@", 0)+1) < 0);
+			document.write("Geldig mail adres : ");
+			(isGeldig)?document.write("JA"):document.write("NEEN");
+			
+		</script>
+		
+
+
+
+	</section>
+</body>
+</html>

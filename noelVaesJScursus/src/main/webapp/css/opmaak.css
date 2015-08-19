@@ -1,0 +1,118 @@
+
+@charset "utf-8";
+@media all {
+    body {
+
+        /* TEKST OPMAAK */
+
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 10pt;
+        line-height: 14pt;
+
+        /* KLEUREN */
+
+        color : #5e5e5e;
+        background-color: #777;
+        /*background-image: url("../img/background.png");*/
+        background-repeat: repeat;        
+
+        /* BORDERS */
+
+        border : none;
+
+        /* BOX MODEL : van binnen naar buiten = content / padding / border / margin */
+
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box; 
+        box-sizing: border-box;    
+
+        width : 100%; 
+        height : 100%;
+        margin : 0;
+        padding: 0;
+        display : block;
+        overflow : auto;
+    }
+
+        h1 {font-size: 3.0rem;}
+        h2 {font-size: 2.6rem;}
+        h1 {color: white ;text-shadow : #ee7711 0 0 6px;}
+        h2 {color: #aaa; ;text-shadow : white 0 0 12px;}
+        h3 {font-size: 2.2rem;}
+        h4 {font-size: 1.8rem;}
+        h5 {font-size: 1.4rem;}
+        h6 {font-size: 1.0rem;}
+        th {
+        	font-size: 0.66rem;
+        	font-weight: bold;
+        	text-transform: uppercase;
+        	color: #ee7711;
+        }
+        td {font-size: 0.9rem;}
+        
+        section.bodywrapper {
+        width : 90%;
+        max-width: 1000px;
+        margin: 0 auto 0 auto;
+        padding: 6pt 18pt 2000pt 18pt;
+        background-color : #e1e1cc;
+        border-left: 6pt solid #ee7711;
+        border-right: 6pt solid #ee7711;
+        }
+        
+        /* NAV */
+        
+        nav {margin-top: 18pt;margin-bottom: 12pt;}
+        nav ul {padding:0;}
+        nav * {text-decoration: none;list-style: none;color: white;font-size: 1.4rem;display: inline;}
+        nav a:hover {color: #ee7711;}
+        
+        /* TABEL */
+        
+        table.tabelopmaak {border: 1pt solid #ee7711; width: 100%;}
+        table.tabelopmaak thead {border-bottom: 1pt solid #ee7711;}
+		table.tabelopmaak th, table.tabelopmaak td {
+		border-right: 1pt solid #ee7711;
+		text-align: center;
+		padding: 1pt 3pt 1pt 3pt;
+		}
+		table.tabelopmaak tr {background: white;}
+		table.tabelopmaak tr:nth-child(odd) {background: #f0f0f0;}
+		table.tabelopmaak tr.accentBackground {background-color: #ee7711;}
+		table.tabelopmaak tr.accentBackground th {border-right: 1pt solid #e1e1cc;}
+		
+		/* FORM */
+		
+		div.entity fieldset {padding: 2mm 2mm 0 2mm;}
+		div.formSet {margin-top: 1mm;position: relative;}
+		div.formSet label {width: 60mm;display: block;float: left;clear: left;}
+		div.formSet input {
+		display: block;float: left;padding-left: 2mm;border: 2pt solid white;margin-bottom: 3pt;
+		
+		}
+		div.formSet input.borderRed {border-color: red;}
+		div.formSet input.borderGreen {border-color: #429d42;;}
+		div.formSet input[type="submit"] {display: block;clear: left;margin-bottom: 18pt;}
+		div.formSet span {
+		padding: 2pt 18pt;
+		background-color: #ee7711;
+		color: white;
+		display: block;float: left;
+		width: auto;
+		}
+		
+		/* ERRORS */
+		
+		.error {
+		padding: 2pt 18pt;
+		margin-bottom: 18pt;
+		background-color: #ee7711;
+		color: white;
+		}
+		
+		/* UITZONDERINGEN */
+		
+		
+		
+}
+
