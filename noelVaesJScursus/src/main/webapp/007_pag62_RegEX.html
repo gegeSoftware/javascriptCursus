@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+
+<html lang="nl">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+	content="korte beschrijving voor search engine, keywords herhalen" />
+<meta name="keywords"
+	content="keyword waarmee search engine de pagina toont" />
+<meta name="author" content="Geert Haegens" />
+<meta name="robots" content="all" />
+<link rel="icon" type="image/x-icon"
+	href="img/GGsoftLogoY_150dpi_oranje.ico" />
+<link href="css/normalize.css" rel="stylesheet" media="all">
+<link href="css/opmaak.css" rel="stylesheet" media="all">
+<!-- meta info voor facebook -->
+<!-- mata info voor twitter -->
+<title>Titel in browser</title>
+
+</head>
+
+<body>
+	<section class="bodywrapper">
+
+		<script type="text/javascript">
+			var correctResultaat = false;
+			var regExp = new RegExp("^\\d{2}[\\/\\.-]\\d{2}[\\/\\.-]\\d{4}$", "g");
+			//var regEx = new RegExp("\\d{2,}","g");
+			var input;
+			do {
+				input = prompt("Correcte datum: ", "13-10-1968");
+				correctResultaat = regExp.test(input);
+			} while (!correctResultaat);
+			document.write("correct<br />");
+			
+			var regExpSep = new RegExp("[\\/\\.-]");
+			var inputSplitted = input.split(regExpSep.exec(input), 3);
+			document.write("inputSplitted = "+inputSplitted+"<br />");
+			
+			if (inputSplitted.length == 3) {
+				var dag = inputSplitted[0];
+				var maand = inputSplitted[1];
+				var jaar = inputSplitted[2];
+				var date = new Date(jaar+"/"+maand+"/"+dag);
+				document.write("date object = "+date.toDateString()+"<br />");
+				delete date;
+			} else {
+				document.write("incorrect number of parts after split = "+inputSplitted.length+"<br />");
+			}
+		</script>
+
+
+	</section>
+</body>
+</html>

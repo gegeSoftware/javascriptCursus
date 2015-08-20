@@ -25,7 +25,25 @@
 
 		<script type="text/javascript">
 		
-		
+		var getallen = new Array();
+		var nieuwGetal;
+		for (var index = 0; index < 6; /*index++*/) {
+			nieuwGetal = Math.floor((Math.random() * 42) + 1);
+			bestondReeds = false;
+			for (var indexVorige = 0; indexVorige < getallen.length; indexVorige++) {
+				if (getallen[indexVorige] == nieuwGetal) {
+					document.write("Getal " + nieuwGetal + " komt reeds voor.<br />");
+					bestondReeds = true;
+					break;
+				}
+			}
+			if (!bestondReeds) {
+				getallen[index] = nieuwGetal;
+				document.write("Getallen[" + index + "] = " + getallen[index] + "<br />");
+				index++;
+			}
+			
+		}
 		
 			
 		</script>

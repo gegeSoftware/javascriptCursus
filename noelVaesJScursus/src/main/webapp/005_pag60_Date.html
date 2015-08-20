@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+
+<html lang="nl">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+	content="korte beschrijving voor search engine, keywords herhalen" />
+<meta name="keywords"
+	content="keyword waarmee search engine de pagina toont" />
+<meta name="author" content="Geert Haegens" />
+<meta name="robots" content="all" />
+<link rel="icon" type="image/x-icon"
+	href="img/GGsoftLogoY_150dpi_oranje.ico" />
+<link href="css/normalize.css" rel="stylesheet" media="all">
+<link href="css/opmaak.css" rel="stylesheet" media="all">
+<!-- meta info voor facebook -->
+<!-- mata info voor twitter -->
+<title>Titel in browser</title>
+
+</head>
+
+<body>
+	<section class="bodywrapper">
+
+		<script type="text/javascript">
+			var datum = new Date();
+			document.write("Datum: " + datum.toLocaleDateString() + "<br />");
+			var begroeting;
+
+			var tijdstipDag = (parseInt(datum.toLocaleTimeString()) / 6) | 0; // bitwize operator float => int
+			switch (tijdstipDag) {
+			case 0:
+				begroeting = "Goede nacht";
+				break;
+			case 1:
+				begroeting = "Goede morgen";
+				break;
+			case 2:
+				begroeting = "Goede middag";
+				break;
+			default:
+				begroeting = "Goede avond";
+				break;
+			}
+			document.write(tijdstipDag + " - " + begroeting + "<br />");
+
+			var geboortedatum = prompt("Geboortedatum ?", "1968-10-13");
+			var geboortedag;
+			datum = new Date(geboortedatum);
+			switch (datum.getDay()) {
+			case 0:
+				geboortedag = "Zondag";
+				break;
+			case 1:
+				geboortedag = "Maandag";
+				break;
+			case 2:
+				geboortedag = "Dinsdag";
+				break;
+			case 3:
+				geboortedag = "Woensdag";
+				break;
+			case 4:
+				geboortedag = "Donderdag";
+				break;
+			case 5:
+				geboortedag = "Vrijdag";
+				break;
+			case 6:
+				geboortedag = "Zaterdag";
+				break;
+			default:
+				geboortedag = "ERROR";
+				break;
+			}
+			document.write("geboortedag: " + geboortedag + "<br />");
+		</script>
+
+
+	</section>
+</body>
+</html>

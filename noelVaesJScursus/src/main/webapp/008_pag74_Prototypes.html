@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+
+<html lang="nl">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+	content="korte beschrijving voor search engine, keywords herhalen" />
+<meta name="keywords"
+	content="keyword waarmee search engine de pagina toont" />
+<meta name="author" content="Geert Haegens" />
+<meta name="robots" content="all" />
+<link rel="icon" type="image/x-icon"
+	href="img/GGsoftLogoY_150dpi_oranje.ico" />
+<link href="css/normalize.css" rel="stylesheet" media="all">
+<link href="css/opmaak.css" rel="stylesheet" media="all">
+<!-- meta info voor facebook -->
+<!-- mata info voor twitter -->
+<title>Titel in browser</title>
+
+</head>
+
+<body>
+	<section class="bodywrapper">
+
+		<script type="text/javascript">
+			//
+			// CONSTRUCTORS
+
+			function Shape(x, y) {
+				this.x = x || 33;
+				this.y = y || 55;
+			}
+
+			function Rectangle(height, width, x, y) {
+				Shape.call(this, x, y);
+				this.className = "Rectangle";
+				this.height = height;
+				this.width = width;
+			}
+
+			// Rectangle erft van Shape 
+			Rectangle.prototype = new Shape();
+
+			function Square(side) {
+				this.height = side;
+				this.width = side;
+			}
+
+			// Square erft van Rectangle, dus automatisch ook van Shape => Shape.call()
+			Square.prototype = new Rectangle();
+
+			function Oval(radius) {
+				this.className = "Oval";
+				this.height = radius;
+				this.width = radius;
+				this.color = "green"; // dynamisch toevoegen (zie verder) zal niet werken !
+			}
+
+			// Oval erft van Rectangle, dus automatisch ook van Shape => Shape.call()
+			Oval.prototype = new Rectangle
+
+			//
+			// DYNAMISCH een propertie toevoegen aan shape zal ook in al zijn kinderen toegevoegd worden
+			Shape.prototype.color = "blue";
+
+			//
+			// OBJECT CREATIE
+			var shape = new Shape();
+			var rectangle = new Rectangle(20, 40);
+			var square = new Square(30);
+			var oval = new Oval(75);
+
+			document.write("Color of shape : " + shape.color + "<br />"); // blue
+			document
+					.write("Color of rectangle : " + rectangle.color + "<br />"); // blue
+			document.write("Color of square : " + square.color + "<br />"); // blue
+			document.write("Color of oval : " + oval.color + "<br />"); // green want is niet overschreven !
+
+			// DYNAMISCH een method toevoegen :
+			function printProperties() {
+				document.write("<br />Properties of " + this.className + " :<br />");
+				for ( var propertie in this) {
+					document.write(propertie+": " + eval("this."+propertie) + " <br />");
+				}
+			}
+			Shape.prototype.printProperties = printProperties;
+			rectangle.printProperties();
+			
+			var otherRectangle = new Rectangle(100, 200, 66, 99);
+			otherRectangle.printProperties();
+			
+			oval.printProperties();
+
+			delete shape;
+			delete rectangle;
+			delete square;
+			delete oval;
+		</script>
+
+
+	</section>
+</body>
+</html>

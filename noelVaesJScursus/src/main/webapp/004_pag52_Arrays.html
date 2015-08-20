@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+
+<html lang="nl">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+	content="korte beschrijving voor search engine, keywords herhalen" />
+<meta name="keywords"
+	content="keyword waarmee search engine de pagina toont" />
+<meta name="author" content="Geert Haegens" />
+<meta name="robots" content="all" />
+<link rel="icon" type="image/x-icon"
+	href="img/GGsoftLogoY_150dpi_oranje.ico" />
+<link href="css/normalize.css" rel="stylesheet" media="all">
+<link href="css/opmaak.css" rel="stylesheet" media="all">
+<!-- meta info voor facebook -->
+<!-- mata info voor twitter -->
+<title>Titel in browser</title>
+
+<style type="text/css">
+select {
+	color: gray;
+}
+</style>
+
+
+</head>
+
+<body>
+	<section class="bodywrapper">
+
+		<!-- 
+		<select>
+			<option selected="selected">Kies</option>
+
+			<script type="text/javascript">
+				// pag 54
+				/*
+					var kleuren = [ "Zwart", "Wit", "Rood", "Groen" ];
+					kleuren.sort();
+					for ( var kleur in kleuren) {
+						document.write("<option>" + kleuren[kleur] + "</option>");
+					}
+				 */
+
+				// pag 56
+				/*
+				var kleuren = [ [ "Zwart", "Black" ], [ "Wit", "White" ],
+						[ "Rood", "Red" ], [ "Groen", "Green" ],
+						[ "Speciaal", "#ee7711" ] ];
+				kleuren.sort();
+				for ( var kleur in kleuren) {
+					document
+							.write("<option style=\"background-color: " + kleuren[kleur][1] + ";\">"
+									+ kleuren[kleur][0] + "</option>");
+				}
+				*/
+				
+				// pag 58
+				function makeSelect() {
+					document.write("<select><br />");
+					document.write("<option>kies</option><br />");
+					document.write("</select><br />");
+				}
+				
+				makeSelect();
+				
+			</script>
+		</select>
+
+ -->
+		<!-- // pag 58 -->
+		<script type="text/javascript">
+			function makeSelect() {
+				document.write("<select><br />");
+				document.write("<option>kies</option><br />");
+				/*
+				NIET OK
+				for (var argument in arguments) {
+					document.write("<option>" + argument + "</option><br />");
+				}
+				*/
+				for (var i = 0; i < arguments.length; i++) {
+					document.write("<option>" + arguments[i] + "</option><br />");
+				}
+				document.write("</select><br />");
+			}
+
+			makeSelect(1, 2, 3, 4);
+			makeSelect("man", "vrouw");
+			makeSelect("arbeider", "bediende", "kader");
+		</script>
+
+
+	</section>
+</body>
+</html>
