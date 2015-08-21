@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+
+<html lang="nl">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+	content="korte beschrijving voor search engine, keywords herhalen" />
+<meta name="keywords"
+	content="keyword waarmee search engine de pagina toont" />
+<meta name="author" content="Geert Haegens" />
+<meta name="robots" content="all" />
+<link rel="icon" type="image/x-icon"
+	href="img/GGsoftLogoY_150dpi_oranje.ico" />
+<link href="css/normalize.css" rel="stylesheet" media="all">
+<link href="css/opmaak.css" rel="stylesheet" media="all">
+<!-- meta info voor facebook -->
+<!-- mata info voor twitter -->
+<title>Titel in browser</title>
+
+</head>
+
+<body>
+	<section class="bodywrapper">
+
+
+
+		<h1>CLOCK</h1>
+		<h2 id="clock">geduld...</h2>
+
+		<script type="text/javascript">
+			function updateTime() {
+				var domElement = document.getElementById("clock");
+				var now = new Date();
+				var sec = now.getSeconds();
+				if (sec & 2) {
+					domElement.setAttribute("style", "color: #ee7711;");
+				} else {
+					domElement.setAttribute("style", "color: #777;");
+				}
+				domElement.innerHTML = now.toLocaleTimeString();
+				document.title = now.toLocaleTimeString();
+				delete domElement;
+				delete now;
+				delete sec;
+			}
+			setInterval("updateTime()", 1000);
+		</script>
+
+	</section>
+</body>
+</html>

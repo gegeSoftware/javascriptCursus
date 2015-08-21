@@ -79,17 +79,19 @@
 
 			// DYNAMISCH een method toevoegen :
 			function printProperties() {
-				document.write("<br />Properties of " + this.className + " :<br />");
+				document.write("<br />Properties of " + this.className
+						+ " :<br />");
 				for ( var propertie in this) {
-					document.write(propertie+": " + eval("this."+propertie) + " <br />");
+					document.write(propertie + ": " + eval("this." + propertie)
+							+ " <br />");
 				}
 			}
 			Shape.prototype.printProperties = printProperties;
 			rectangle.printProperties();
-			
+
 			var otherRectangle = new Rectangle(100, 200, 66, 99);
 			otherRectangle.printProperties();
-			
+
 			oval.printProperties();
 
 			delete shape;
@@ -98,7 +100,11 @@
 			delete oval;
 		</script>
 
-
+		<noscript>
+			<strong>Javascript is not supported by your browser of was
+				disabled.<br />This page may not result in te intended experience !
+			</strong>
+		</noscript>
 	</section>
 </body>
 </html>

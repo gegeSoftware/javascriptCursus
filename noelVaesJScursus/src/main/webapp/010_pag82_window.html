@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+
+<html lang="nl">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+	content="korte beschrijving voor search engine, keywords herhalen" />
+<meta name="keywords"
+	content="keyword waarmee search engine de pagina toont" />
+<meta name="author" content="Geert Haegens" />
+<meta name="robots" content="all" />
+<link rel="icon" type="image/x-icon"
+	href="img/GGsoftLogoY_150dpi_oranje.ico" />
+<link href="css/normalize.css" rel="stylesheet" media="all">
+<link href="css/opmaak.css" rel="stylesheet" media="all">
+<!-- meta info voor facebook -->
+<!-- mata info voor twitter -->
+<title>Titel in browser</title>
+
+</head>
+
+<body>
+	<section class="bodywrapper">
+
+		<script type="text/javascript">
+			
+			document.write(window.defaultStatus.length + "<br />");
+			window.defaultStatus = "GEERT HAEGENS waar verschijnt deze tekst ?";
+			//document.write(window.defaultStatus.length + "<br />");
+
+			/*
+			var object = prompt("window / navigator / history / location / screen ?", "window");
+			document.write("u koos: " + object + "<br /><br />");
+			var teller = 0;
+			for (prop in eval(object)) {
+				document.write(++teller + ": " + prop + "<br />");
+			}*/
+
+			//window.alert("test");
+			//window.confirm("JA / NEE");
+			window.moveBy(100, 200); // wat doet dit ??
+
+			// window tijdfuncties
+			/*
+			setTimeout("document.write('Geert ?<br />')", 2000);
+			setInterval("document.write('Ja ?<br />')", 4000); */
+			
+			// nieuwe vensters : popups
+			var popup = window.open("001_helloWorld.html","test","toolbar=no");
+			popup.resizeTo(500, 500);
+			setTimeout("popup.close()", 3000);
+			
+			var leegScherm = window.open("notFound.html","test","toolbar=no");
+			leegScherm.resizeTo(500, 500);
+			leegScherm.document.write("Zie je deze tekst ?<br />");
+			leegScherm.document.write("this.opener = " + leegscherm.window.opener +"<br />");
+			leegScherm.
+			setTimeout("leegScherm.close()", 6000);
+		</script>
+
+
+	</section>
+</body>
+</html>

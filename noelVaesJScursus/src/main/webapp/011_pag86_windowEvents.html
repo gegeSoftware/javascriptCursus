@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+
+<html lang="nl">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+	content="korte beschrijving voor search engine, keywords herhalen" />
+<meta name="keywords"
+	content="keyword waarmee search engine de pagina toont" />
+<meta name="author" content="Geert Haegens" />
+<meta name="robots" content="all" />
+<link rel="icon" type="image/x-icon"
+	href="img/GGsoftLogoY_150dpi_oranje.ico" />
+<link href="css/normalize.css" rel="stylesheet" media="all">
+<link href="css/opmaak.css" rel="stylesheet" media="all">
+<!-- meta info voor facebook -->
+<!-- mata info voor twitter -->
+
+<script type="text/javascript">
+		
+		function startClock() {
+			date = new Date();
+			document.write(date.toLocaleTimeString()+"<br />");
+			delete date;
+		}
+		
+		function bye() {
+			window.alert("byeby !!<br />");
+		}
+		
+		</script>
+
+<title>Titel in browser</title>
+
+</head>
+
+<body onload = "startClock()">
+	<section class="bodywrapper" style="line-height: 0;">
+
+		<script type="text/javascript">
+		
+		
+		//window.onload = startClock;
+		setInterval(startClock, 1000);
+		
+		window.onunload = bye();
+		
+			
+		</script>
+
+
+	</section>
+</body>
+</html>
